@@ -1,7 +1,5 @@
 import React, {createContext, Component} from 'react'
-
 export const ThemeContext = createContext();
-
 class ThemeContextProvider extends Component {
     state = {
         isLightTheme: true,
@@ -13,9 +11,11 @@ class ThemeContextProvider extends Component {
     }
     render(){
         return (
-            <ThemeContext.Provider value={{...this.state, toggleTheme: this.toggleTheme}}>
-                {this.props.children}
-            </ThemeContext.Provider>
+            <div className="salam">
+                <ThemeContext.Provider value={{...this.state, toggleTheme: this.toggleTheme}}>
+                    {this.props.children}
+                </ThemeContext.Provider>
+            </div>     
         )
     }
 }
